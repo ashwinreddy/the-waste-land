@@ -7,9 +7,20 @@
     <title>The Waste Land by T. S. Eliot</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="shepherd.css">
+    <script src="shepherd.min.js"></script>
     <style>
+        @font-face {
+            font-family: "ET Book";
+            src: url(et-book-roman-old-style-figures.woff);
+        }
+
         body {
-            font-family: "ETBembo";
+            font-family: "ET Book";
+        }
+
+        .text-body-secondary {
+            color: black !important;
         }
 
         .title {
@@ -44,40 +55,29 @@
 
 <body>
     <main>
-
         <div class="py-5 text-center">
             <h1 class="display-5 title">
-                <a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="The Title"
-                    data-bs-content="The original title was He Do the Police in Different Voices, which comes from Charles Dickens' Our Mutual Friend, hinting at the the polyvocal quality of the poem.">
-                    The Waste Land
-                </a>
+                The Waste Land
                 <br>
                 <small class="text-body-secondary">T.S. Eliot</small>
-                <p class="fs-3">1922</p>
-            </h1>
+                <p class="fs-3" id="publication-year">1922</p>
+            </h1>            
             <div class="col-lg-6 mx-auto">
                 <figure>
-                    <a tabindex="0" style="text-align:justify" data-bs-trigger="focus" data-bs-toggle="popover"
-                        data-bs-title="Epigraph"
-                        data-bs-content="One of the tall tales of Trimalchio in the Satyricon of Petronius Arbiter, a first-century novel of which only fragments survive. The Sibyl was granted immortality but not youth. This epigraph replaced one from Conrad's Heart of Darkness, which Eliot dropped on Pound's advice.">
-                        <blockquote class="blockquote">
-                            <i data-bs-toggle="tooltip"
-                                data-bs-title="For I myself once saw with my own eyes the Sibyl hanging in a cage, and when the boys asked her, 'Sybil, what do you want?' she answered 'I want to die.'">Nam
-                                Sibyllam quidem Cumis ego ipse oculis meis
-                                vidi in ampulla pendere, et cum illi pueri
-                                dicerent:&nbsp;&Sigma;ί&beta;&upsilon;&lambda;&lambda;&alpha;
-                                &tau;ί&nbsp;&theta;έ&lambda;&epsilon;&iota;&sigmaf;; respondebat
-                                illa:&nbsp;ά&pi;&omicron;&theta;&alpha;&nu;&epsilon;&icirc;&nu;&nbsp;&theta;έ&lambda;&omega;.</i>
-                        </blockquote>
-                    </a>
+                    <blockquote id="epigraph" class="blockquote">
+                        <i data-bs-toggle="tooltip"
+                            data-bs-title="For I myself once saw with my own eyes the Sibyl hanging in a cage, and when the boys asked her, 'Sybil, what do you want?' she answered 'I want to die.'">Nam
+                            Sibyllam quidem Cumis ego ipse oculis meis
+                            vidi in ampulla pendere, et cum illi pueri
+                            dicerent:&nbsp;&Sigma;ί&beta;&upsilon;&lambda;&lambda;&alpha;
+                            &tau;ί&nbsp;&theta;έ&lambda;&epsilon;&iota;&sigmaf;; respondebat
+                            illa:&nbsp;ά&pi;&omicron;&theta;&alpha;&nu;&epsilon;&icirc;&nu;&nbsp;&theta;έ&lambda;&omega;.</i>
+                    </blockquote>
                 </figure>
-                <a style="font-family: ETBembo" tabindex="0" data-bs-trigger="focus" data-bs-toggle="popover"
-                    data-bs-title="Dedication" data-bs-content="From Purgatorio 26, Dante's tribute to Arnaut Daniel.">
-                    <p class="lead poem mb-4">
-                        For Ezra Pound<br>
-                        <i data-bs-toggle="tooltip" data-bs-title="The better craftsman">il miglior fabbro</i>.
-                    </p>
-                </a>
+                <p class="lead poem mb-4">
+                    For Ezra Pound<br>
+                    <i data-bs-toggle="tooltip" data-bs-title="The better craftsman">il miglior fabbro</i>.
+                </p>
             </div>
         </div>
         <div class="modal fade" id="aboutModal" tabindex="-1" style="font-family:sans-serif;">
@@ -112,7 +112,7 @@
 
                             <input type="checkbox" class="btn-check" id="eliot-notes" autocomplete="off">
                             <label class="btn btn-outline-secondary" for="eliot-notes" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasScrolling"> Eliot's Notes</label>
+                                data-bs-target="#offcanvasScrolling"> Eliot's Notes</label>
                             <!-- <button type="button" class="btn btn-outline-dark" id="footnotes" data-bs-toggle="collapse"
                                 data-bs-target="#commentary">Comments</button> -->
                             <!-- <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
@@ -126,13 +126,10 @@
                         class="scrollspy-example" tabindex="0">
                         <div class="poem">
                             <div id="burial-of-the-dead">
-                                <a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus"
-                                    title="The Order for the Burial of the Dead"
-                                    data-bs-content="From the Book of Common Prayer, the burial rites of the Church of England"
-                                    style="font-variant: small-caps;">I. The <span class="highlight">Burial</span> of
-                                    the Dead</a>
-                                <br>
-                                <div class="line">
+                                I. The <span class="highlight">Burial</span> of the Dead
+                            </div>
+                            <div>
+                                <div class="line" id="line-1">
                                     <span class="highlight">April is the cruellest month,</span> breeding
                                 </div>
                                 <div class="line">
@@ -162,7 +159,7 @@
                                     And when we were children, staying at the archduke&rsquo;s,</div>
                                 <div class="line">
                                     My cousin&rsquo;s, he took me out on a sled,</div>
-                                <div class="line">
+                                <div class="line" id="line-15">
                                     And I was frightened. He said, Marie,</div>
                                 <div class="line">
                                     Marie, hold on tight. And down we went.</div>
@@ -234,7 +231,7 @@
                                     <em>Oed&rsquo; und leer das Meer</em>.
                                 </div>
                                 <br>
-                                <div class="line">
+                                <div class="line" id="line-43">
                                     Madame Sosostris, famous clairvoyante,</div>
                                 <div class="line">
                                     Had a bad cold, nevertheless</div>
@@ -1281,7 +1278,7 @@
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">
                 <!-- <a tabindex="0" role="button" data-bs-toggle="modal"
                     data-bs-target="#exampleModal" class="offcanvas-title title" id="notesLabel"> -->
-                    Notes on the Waste Land
+                Notes on the Waste Land
                 <!-- </a> -->
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1410,7 +1407,9 @@
                     <a href="#line-192">192.</a> Cf. <i>The Tempest</i>, I, ii.
                 </li>
                 <li>
-                    <a href="#line-196">196.</a> Cf. Marvell, <a href="https://www.poetryfoundation.org/poems/44688/to-his-coy-mistress" target="_blank"><i>To His Coy Mistress</i></a>.
+                    <a href="#line-196">196.</a> Cf. Marvell, <a
+                        href="https://www.poetryfoundation.org/poems/44688/to-his-coy-mistress" target="_blank"><i>To
+                            His Coy Mistress</i></a>.
                 </li>
                 <li>
                     <a href="#line-197">197.</a> Cf. Day, <i>Parliament of Bees</i>: <br>
@@ -1519,7 +1518,8 @@
                 <li><a href="#line-358">357.</a> This is <i>Turdus aonalaschkae pallasii</i>, the hermit-thrush which I
                     have heard in Quebec
                     County. Chapman says (<i>Handbook of Birds of Eastern North America</i>) “it is most at home in
-                    secluded woodland and thickety retreats&hellip; Its notes are not remarkable for variety or volume, but
+                    secluded woodland and thickety retreats&hellip; Its notes are not remarkable for variety or volume,
+                    but
                     in purity and sweetness of tone and exquisite modulation they are unequalled.” Its “water-dripping
                     song” is justly celebrated.</li>
                 <li><a href="#line-361">360.</a> The following lines were stimulated by the account of one of the
@@ -1535,7 +1535,8 @@
                     sie mit Tränen.”
                 </li>
                 <li>
-                    <a href="#line-402">401.</a> “Datta, dayadhvam, damyata” (Give, sympathise, control). The fable of the meaning of the
+                    <a href="#line-402">401.</a> “Datta, dayadhvam, damyata” (Give, sympathise, control). The fable of
+                    the meaning of the
                     Thunder is found in the <i>Brihadaranyaka—Upanishad</i>, 5, 1. A translation is found in Deussen's
                     <i>Sechsig Upanishads des Veda</i>, p. 489.
                 </li>
@@ -1554,7 +1555,8 @@
                     Also F. H. Bradley, <i>Appearance and Reality</i>, p. 306. <br>
                     “My external sensations are no less private to myself than are my thoughts or my feelings. In either
                     case my experience falls within my own circle, a circle closed on the outside; and, with all its
-                    elements alike, every sphere is opaque to the others which surround it&hellip; In brief, regarded as an
+                    elements alike, every sphere is opaque to the others which surround it&hellip; In brief, regarded as
+                    an
                     existence which appears in a soul, the whole world for each is peculiar and private to that soul.”
                 </li>
                 <li>
@@ -1582,19 +1584,13 @@
                     <a href="#line-432">431.</a> V. Kyd's <i>Spanish Tragedy</i>.
                 </li>
                 <li>
-                    <a href="#line-434">433.</a> Shantih. Repeated as here, a formal ending to an Upanishad. “The Peace which passeth
+                    <a href="#line-434">433.</a> Shantih. Repeated as here, a formal ending to an Upanishad. “The Peace
+                    which passeth
                     understanding” is a feeble translation of the content of the word.
                 </li>
             </ul>
         </div>
     </div>
-
-    <!-- <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted">Inspired by <a href="https://digitaldante.columbia.edu/"><i>Digital
-                        Dante</i></a></span>
-        </div>
-    </footer> -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -1617,6 +1613,102 @@
         $('#footnotes').click(function () {
             $('.highlight').toggleClass('mark');
         });
+    </script>
+    <script>
+        const tour = new Shepherd.Tour({
+            useModalOverlay: true,
+        });
+
+        const standardButtons = [
+            {
+                action() {
+                    return this.back();
+                },
+                classes: 'shepherd-button-secondary',
+                text: 'Back'
+            },
+            {
+                action() {
+                    return this.next();
+                },
+                text: 'Next',
+            }
+        ];
+
+        tour.addSteps([{
+            title: "Title",
+            text: "Originally titled He Do the Police in Different Voices, an allusion to Charles Dickens' <i>Our Mutual Friend</i>.",
+            attachTo: {
+                element: ".title",
+                on: "left-start"
+            },
+            buttons: standardButtons
+        },
+        {
+            title: "Publication Year",
+            text: "Not long after World War I.",
+            attachTo: {
+                element: "#publication-year",
+                on: "left-end"
+            },
+            buttons: standardButtons
+        },
+        {
+            title: "Epigraph",
+            text: "One of the tall tales of Trimalchio in the Satyricon of Petronius Arbiter, a first-century novel of which only fragments survive. The Sibyl was granted immortality but not youth. This epigraph replaced one from Conrad's Heart of Darkness, which Eliot dropped on Pound's advice.",
+            attachTo: {
+                element: "#epigraph",
+                on: "left-end"
+            },
+            buttons: standardButtons
+        },
+        {
+            title: "Dedication",
+            text: "From Purgatorio 26, Dante's tribute to Arnaut Daniel.",
+            attachTo: {
+                element: ".lead",
+                on: "left-end"
+            },
+            buttons: standardButtons
+        },
+        {
+            title: "The Order for the Burial of the Dead",
+            text: "From the Book of Common Prayer, the burial rites of the Church of England.",
+            attachTo: {
+                element: "#burial-of-the-dead",
+                on: "left-end"
+            },
+            buttons: standardButtons
+        },
+        {
+            title: "Opening",
+            text: "Cf. Chaucer's Canterbury Tales.",
+            attachTo: {
+                element: "#line-1",
+                on: "left-end"
+            },
+            buttons: standardButtons
+        },
+        {
+            text: "Countess Marie Larisch",
+            attachTo: {
+                element: "#line-15",
+                on: "left-end"
+            },
+            buttons: standardButtons
+        },
+        {
+            text: "Aldous Huxley",
+            attachTo: {
+                element: "#line-43",
+                on: "left-end"
+            },
+            buttons: standardButtons
+        },
+        ]);
+
+
+        tour.start();
     </script>
 </body>
 
