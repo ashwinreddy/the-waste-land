@@ -38,7 +38,7 @@
 
         .numbered-line:before {
             content: counter(line);
-            font-style:italic;
+            font-style: italic;
         }
 
         .annotation {
@@ -76,14 +76,18 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row justify-content-start gx-5">
+            <div class="row">
                 <div class="col-2">
                     <div id="table-of-contents" class="list-group sticky-top text-center">
-                        <a class="list-group-item list-group-item-action" href="#burial-of-the-dead">I</a>
-                        <a class="list-group-item list-group-item-action" href="#game-of-chess">II</a>
-                        <a class="list-group-item list-group-item-action" href="#fire-sermon">III</a>
-                        <a class="list-group-item list-group-item-action" href="#death-by-water">IV</a>
-                        <a class="list-group-item list-group-item-action" href="#what-the-thunder-said">V</a>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group w-100" role="group">
+                                <a type="button" class="btn btn-outline-primary" href="#burial-of-the-dead">I</a>
+                                <a type="button" class="btn btn-outline-primary" href="#game-of-chess">II</a>
+                                <a type="button" class="btn btn-outline-primary" href="#fire-sermon">III</a>
+                                <a type="button" class="btn btn-outline-primary" href="#death-by-water">IV</a>
+                                <a type="button" class="btn btn-outline-primary" href="#what-the-thunder-said">V</a>
+                            </div>
+                        </div>
                         <br>
                         <div class="btn-group-vertical" role="group">
                             <label class="btn btn-outline-secondary" id="line-numbers" data-bs-toggle="button">Line
@@ -105,7 +109,7 @@
                             </div>
                             <div>
                                 <div id="april">
-                                    <div class="line annotation">
+                                    <div class="line">
                                         April is the cruellest month, breeding
                                     </div>
                                     <div class="line">
