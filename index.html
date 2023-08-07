@@ -42,7 +42,8 @@
         }
 
         .annotation {
-            text-decoration: dashed !important;
+            text-decoration: underline; 
+            text-decoration-style: dotted; 
             cursor: pointer;
         }
     </style>
@@ -78,8 +79,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2">
-                    <div id="table-of-contents" class="list-group sticky-top text-center">
-                        <div class="btn-toolbar" role="toolbar">
+                    <div class="list-group sticky-top text-center">
+                        <div id="table-of-contents" class="btn-toolbar" role="toolbar">
                             <div class="btn-group w-100" role="group">
                                 <a type="button" class="btn btn-outline-primary" href="#burial-of-the-dead">I</a>
                                 <a type="button" class="btn btn-outline-primary" href="#game-of-chess">II</a>
@@ -95,6 +96,7 @@
                             <input type="checkbox" class="btn-check" id="eliot-notes" autocomplete="off">
                             <label class="btn btn-outline-secondary" for="eliot-notes" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasScrolling"> Eliot's Notes</label>
+                                <a class="btn btn-outline-secondary" href="./essay.html" target="_blank">Companion Essay</a>
                             <label class="btn btn-success" id="guided-tour">Guided Reading</label>
                         </div>
                     </div>
@@ -108,7 +110,7 @@
                                 I. The Burial of the Dead
                             </div>
                             <div>
-                                <div id="april">
+                                <div id="april" class="annotation">
                                     <div class="line">
                                         April is the cruellest month, breeding
                                     </div>
@@ -1101,7 +1103,7 @@
                                     <div class="line">
                                         DA</div>
                                     <div class="line" id="line-402">
-                                        <em>Datta</em>: what have we given?<br>
+                                        <span data-bs-toggle="tooltip" data-bs-title="Give"><em>Datta</em></span>: what have we given?<br>
                                     </div>
                                     <div class="line">
                                         My friend, blood shaking my heart</div>
@@ -1122,7 +1124,7 @@
                                     <div class="line">
                                         DA</div>
                                     <div class="line" id="line-412">
-                                        <em>Dayadhvam</em>: I have heard the key<br>
+                                        <span data-bs-toggle="tooltip" data-bs-title="Sympathize"><em>Dayadhvam</em></span>: I have heard the key<br>
                                     </div>
                                     <div class="line">
                                         Turn in the door once and turn once only</div>
@@ -1137,7 +1139,7 @@
                                     <div class="line">
                                         DA</div>
                                     <div class="line">
-                                        <em>Damyata</em>: The boat responded<br>
+                                        <span data-bs-toggle="tooltip" data-bs-title="Control"><em>Damyata</em></span>: The boat responded<br>
                                     </div>
                                     <div class="line">
                                         Gaily, to the hand expert with sail and oar</div>
@@ -1401,8 +1403,9 @@
                     <a href="#line-293">293.</a> Cf. <a
                         href="https://digitaldante.columbia.edu/dante/divine-comedy/purgatorio/purgatorio-5/"><i>Purgatorio</i>,
                         V</a>, 133: <br>
-                    “Ricorditi di me, che son la Pia; <br>
-                    “Siena mi fe’, disfecemi Maremma.”
+                        <span data-bs-toggle="tooltip"
+                        data-bs-title="May you remember me, who am La Pia; Siena made -- Maremma unmade -- me">“Ricorditi di me, che son la Pia; <br>
+                    “Siena mi fe’, disfecemi Maremma.”</span>
                 </li>
                 <li>
                     <a href="#line-307">307.</a> V. St. Augustine's <i>Confessions</i>: “to Carthage then I came, where
@@ -1440,10 +1443,11 @@
                     actually be counted.</li>
                 <li>
                     <a href="#line-367">366</a>-<a href="#line-377">376.</a> Cf. Hermann Hesse, <i>Blick ins chaos</i>:
-                    “Schon ist halb Europa, schon ist zumindest der halbe Osten Europas auf dem Wege zum Chaos, fährt
+                    <span data-bs-toggle="tooltip"
+                        data-bs-title="Already half of Europe, already at least the eastern half of Europe is on the way to chaos, driving drunk on holy delusion along the edge of an abyss and singing to it, drunk songs and hymnals like Dmitri Karamazov sang. Over these songs the commoner laughs scornfully, the saint and seer listens with tears on her cheeks.">“Schon ist halb Europa, schon ist zumindest der halbe Osten Europas auf dem Wege zum Chaos, fährt
                     betrunken im heiligem Wahn am Abgrund entlang und singt dazu, singt betrunken und hymnisch wie
                     Dmitri Karamasoff sang. Ueber diese Lieder lacht der Bürger beleidigt, der Heilige und Seher hört
-                    sie mit Tränen.”
+                    sie mit Tränen.”</span>
                 </li>
                 <li>
                     <a href="#line-402">401.</a> “Datta, dayadhvam, damyata” (Give, sympathise, control). The fable of
@@ -1461,8 +1465,9 @@
                     <a href="#line-412">411.</a> Cf. <a
                         href="https://digitaldante.columbia.edu/dante/divine-comedy/inferno/inferno-33/"><i>Inferno</i>,
                         XXXIII</a>, 46: <br>
-                    “ed io sentii chiavar l’uscio di sotto <br>
-                    all’orribile torre.” <br>
+                        <span data-bs-toggle="tooltip"
+                        data-bs-title="below, I heard them nailing up the door of that appalling tower">“ed io sentii chiavar l’uscio di sotto <br>
+                    all’orribile torre.”</span> <br>
                     Also F. H. Bradley, <i>Appearance and Reality</i>, p. 306. <br>
                     “My external sensations are no less private to myself than are my thoughts or my feelings. In either
                     case my experience falls within my own circle, a circle closed on the outside; and, with all its
@@ -1480,10 +1485,11 @@
                     <a href="#line-428">427.</a> V. <a
                         href="https://digitaldante.columbia.edu/dante/divine-comedy/purgatorio/purgatorio-26/"><i>Purgatorio</i>,
                         XXVI</a>, 148. <br>
-                    “‘Ara vos prec, per aquella valor <br>
+                        <span data-bs-toggle="tooltip"
+                        data-bs-title="“Now, by the Power that conducts you to the summit of the stairway, I pray you: remember, at time opportune, my pain!” Then, in the fire that refines, he hid.">“‘Ara vos prec, per aquella valor <br>
                     ‘que vos guida al som de l’escalina, <br>
                     ‘sovegna vos a temps de ma dolor.’ <br>
-                    Poi s’ascose nel foco che gli affina.”
+                    Poi s’ascose nel foco che gli affina.”</span>
                 </li>
                 <li>
                     <a href="#line-429">428.</a> V. <i>Pervigilium Veneris</i>. Cf. Philomela in Parts II and III.
@@ -1557,10 +1563,10 @@
         tour.addSteps([
             {
                 title: "<i>The Waste Land</i>",
-                text: "Though much ink has been spilled on T.S. Eliot's deliberately difficult modernist masterpiece, the need for a digital edition that invites rather than distances new readers of this multilingual and allusively dense poem has never been greater. Click the <b>Next</b> button to start the guided reading.",
+                text: "This digital edition welcomes new readers to the multilingual and allusively dense poem. Click <b>Next</b> to start the guided reading.",
                 attachTo: {
                     element: "body",
-                    on: "top-start"
+                    on: "left-start"
                 },
                 buttons: standardButtons,
                 arrow: false,
@@ -1594,10 +1600,10 @@
             },
             {
                 title: "Epigraph",
-                text: "The epigraph comes from the <i>Satyricon</i>, a first-century Roman satirical novel of which only fragments survive. The quote comes from the garish and decadent dinner host Trimlachio, who relates the story of the Sibyl. The Sibyl was a prophetess who was gifted immortality, but aged horribly because she had not also asked for everlasting youth. This epigraph replaced one from Conrad's Heart of Darkness, which Eliot dropped on Pound's advice.",
+                text: "From the <i>Satyricon</i>, a first-century Roman satire of which only fragments survive. A garish and decadent dinner host, Trimlachio, relates the story of the Sibyl. The Sibyl was a prophetess who was gifted immortality, but aged horribly because she had not also asked for everlasting youth. This epigraph replaced one from Conrad's Heart of Darkness, which Eliot dropped on Pound's advice.",
                 attachTo: {
                     element: "#epigraph",
-                    on: "left-end"
+                    on: "bottom-end"
                 },
                 buttons: standardButtons,
                 cancelIcon: {
@@ -1606,21 +1612,9 @@
             },
             {
                 title: "Dedication",
-                text: "Ezra Pound edited <i>The Waste Land</i>.",
+                text: "Ezra Pound edited <i>The Waste Land</i>. From Purgatorio 26, Dante's tribute to Arnaut Daniel.",
                 attachTo: {
                     element: ".lead",
-                    on: "left-end"
-                },
-                buttons: standardButtons,
-                cancelIcon: {
-                    enabled: true
-                }
-            },
-            {
-                title: "Dedication",
-                text: "From Purgatorio 26, Dante's tribute to Arnaut Daniel.",
-                attachTo: {
-                    element: "#fabbro",
                     on: "left-end"
                 },
                 buttons: standardButtons,
@@ -1633,7 +1627,7 @@
                 text: "Already we have encountered death and fragmentation and in four languages: English, Latin, Greek, and Italian.",
                 attachTo: {
                     element: ".text-center",
-                    on: "left-end"
+                    on: "bottom-end"
                 },
                 buttons: standardButtons,
                 cancelIcon: {
@@ -1641,12 +1635,13 @@
                 }
             },
             {
-                title: "Sidebar",
-                text: "There are 5 parts to this poem. You can click a button to scroll to the appropriate part. I recommend enabling line numbers as well.",
+                title: "Parts",
+                text: "The poem has 5 parts.",
                 attachTo: {
                     element: "#table-of-contents",
                     on: "left-end"
                 },
+                arrow: false,
                 buttons: standardButtons,
                 cancelIcon: {
                     enabled: true
@@ -1666,7 +1661,7 @@
             },
             {
                 title: "Incipit",
-                text: `Compare these lines to the prologue to Geoffrey Chaucer's <i>Canterbury Tales</i> (modernized by Coghill for clarity): <br><br>
+                text: `Compare these lines to the prologue to Geoffrey Chaucer's <i><a href="https://www.poetryfoundation.org/poems/43926/the-canterbury-tales-general-prologue">Canterbury Tales</a></i> (modernized by Neville Coghill for clarity): <br><br>
                         <p>
                         When in April the sweet showers fall <br>
                         And pierce the drought of March to the root, and all <br>
