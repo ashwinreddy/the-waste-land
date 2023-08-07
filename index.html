@@ -50,6 +50,11 @@
         .modal-body {
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
+
+        .annotation {
+            text-decoration: dashed !important;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -63,11 +68,11 @@
             </h1>
             <p class="fs-3" id="publication-year">1922</p>
             <div class="col-lg-6 mx-auto" id="front-matter ">
-                <figure>
+                <figure class="text-start">
                     <blockquote id="epigraph" class="blockquote">
                         <i data-bs-toggle="tooltip"
-                            data-bs-title="For I myself once saw with my own eyes the Sibyl hanging in a cage, and when the boys asked her, 'Sybil, what do you want?' she answered 'I want to die.'">Nam
-                            Sibyllam quidem Cumis ego ipse oculis meis
+                            data-bs-title="For I myself once saw with my own eyes the Sibyl hanging in a cage, and when the boys asked her, 'Sybil, what do you want?' she answered 'I want to die.'">
+                            Nam Sibyllam quidem Cumis ego ipse oculis meis
                             vidi in ampulla pendere, et cum illi pueri
                             dicerent:&nbsp;&Sigma;ί&beta;&upsilon;&lambda;&lambda;&alpha;
                             &tau;ί&nbsp;&theta;έ&lambda;&epsilon;&iota;&sigmaf;; respondebat
@@ -81,7 +86,7 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row justify-content-start align-items-start gx-5">
+            <div class="row justify-content-start gx-5">
                 <div class="col-2">
                     <div id="table-of-contents" class="list-group sticky-top text-center">
                         <a class="list-group-item list-group-item-action" href="#burial-of-the-dead">I</a>
@@ -91,9 +96,8 @@
                         <a class="list-group-item list-group-item-action" href="#what-the-thunder-said">V</a>
                         <br>
                         <div class="btn-group-vertical" role="group">
-                            <input type="checkbox" class="btn-check" id="line-numbers" autocomplete="off">
-                            <label class="btn btn-outline-secondary" for="line-numbers">Line Numbers</label>
-
+                            <label class="btn btn-outline-secondary" id="line-numbers" data-bs-toggle="button">Line
+                                Numbers</label>
                             <input type="checkbox" class="btn-check" id="eliot-notes" autocomplete="off">
                             <label class="btn btn-outline-secondary" for="eliot-notes" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasScrolling"> Eliot's Notes</label>
@@ -106,12 +110,12 @@
                     <div data-bs-spy="scroll" data-bs-target="#table-of-contents" data-bs-smooth-scroll="true"
                         class="scrollspy-example" tabindex="0">
                         <div class="poem">
-                            <div id="burial-of-the-dead">
+                            <div id="burial-of-the-dead" style="font-variant: small-caps;">
                                 I. The Burial of the Dead
                             </div>
                             <div>
                                 <div id="april">
-                                    <div class="line">
+                                    <div class="line annotation">
                                         April is the cruellest month, breeding
                                     </div>
                                     <div class="line">
@@ -891,7 +895,6 @@
                             <div id="death-by-water">
                                 <a style="font-variant: small-caps;">
                                     IV. Death by Water</a>
-
                                 <br>
                                 <div class="line">
                                     Phlebas the Phoenician, a fortnight dead,</div>
@@ -1195,7 +1198,7 @@
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body" style="font-family: ETBembo;">
+        <div class="offcanvas-body">
             <p>Not only the title, but the plan and a good deal of the incidental symbolism of the poem were suggested
                 by Miss Jessie L. Weston's book on the Grail legend: <a
                     href="https://en.wikisource.org/wiki/From_Ritual_to_Romance" target="_blank"><i>From Ritual to
