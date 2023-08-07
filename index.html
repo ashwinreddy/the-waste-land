@@ -60,9 +60,9 @@
                 The Waste Land
                 <br>
                 <small class="text-body-secondary">T.S. Eliot</small>
-                <p class="fs-3" id="publication-year">1922</p>
-            </h1>            
-            <div class="col-lg-6 mx-auto">
+            </h1>
+            <p class="fs-3" id="publication-year">1922</p>
+            <div class="col-lg-6 mx-auto" id="front-matter ">
                 <figure>
                     <blockquote id="epigraph" class="blockquote">
                         <i data-bs-toggle="tooltip"
@@ -74,26 +74,10 @@
                             illa:&nbsp;ά&pi;&omicron;&theta;&alpha;&nu;&epsilon;&icirc;&nu;&nbsp;&theta;έ&lambda;&omega;.</i>
                     </blockquote>
                 </figure>
-                <p class="lead poem mb-4">
+                <p class="lead poem">
                     For Ezra Pound<br>
-                    <i data-bs-toggle="tooltip" data-bs-title="The better craftsman">il miglior fabbro</i>.
+                    <i data-bs-toggle="tooltip" data-bs-title="The better craftsman" id="fabbro">il miglior fabbro.</i>
                 </p>
-            </div>
-        </div>
-        <div class="modal fade" id="aboutModal" tabindex="-1" style="font-family:sans-serif;">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <p>This project aims to foster appreciation for a landmark poem which, though difficult and
-                            intimidating, invites the reader on a spiritual and literary journey with its trail of
-                            myriad allusions.</p>
-                        <p>By default, the page only displays the text of the poem. You can enable line numbers, consult
-                            Eliot's notes, and read the comments in as linear or non-linear a fashion you like.</p>
-                        <p>Scroll over text in foreign languages to see their translation, and follow the many links to
-                            explore the poem's sources.</p>
-                        <p>Enjoy!</p>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="container-fluid">
@@ -113,10 +97,7 @@
                             <input type="checkbox" class="btn-check" id="eliot-notes" autocomplete="off">
                             <label class="btn btn-outline-secondary" for="eliot-notes" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasScrolling"> Eliot's Notes</label>
-                            <!-- <button type="button" class="btn btn-outline-dark" id="footnotes" data-bs-toggle="collapse"
-                                data-bs-target="#commentary">Comments</button> -->
-                            <!-- <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-                                data-bs-target="#aboutModal">About</button> -->
+                            <label class="btn btn-success" id="guided-tour">Guided Reading</label>
                         </div>
                     </div>
                 </div>
@@ -126,25 +107,27 @@
                         class="scrollspy-example" tabindex="0">
                         <div class="poem">
                             <div id="burial-of-the-dead">
-                                I. The <span class="highlight">Burial</span> of the Dead
+                                I. The Burial of the Dead
                             </div>
                             <div>
-                                <div class="line" id="line-1">
-                                    <span class="highlight">April is the cruellest month,</span> breeding
+                                <div id="april">
+                                    <div class="line">
+                                        April is the cruellest month, breeding
+                                    </div>
+                                    <div class="line">
+                                        Lilacs out of the dead land, mixing</div>
+                                    <div class="line">
+                                        Memory and desire, stirring</div>
+                                    <div class="line">
+                                        Dull roots with spring rain.</div>
                                 </div>
-                                <div class="line">
-                                    Lilacs out of the dead land, mixing</div>
-                                <div class="line">
-                                    Memory and desire, stirring</div>
-                                <div class="line">
-                                    Dull roots with spring rain.</div>
                                 <div class="line">
                                     Winter kept us warm, covering</div>
                                 <div class="line">
                                     Earth in forgetful snow, feeding</div>
                                 <div class="line">
                                     A little life with dried tubers.</div>
-                                <div class="line">
+                                <div class="line" id="line-8">
                                     Summer surprised us, coming over the Starnbergersee</div>
                                 <div class="line">
                                     With a shower of rain; we stopped in the colonnade,</div>
@@ -171,11 +154,11 @@
                                 <div class="line">
                                     What are the roots that clutch, what branches grow</div>
                                 <div class="line" id="line-20">
-                                    Out of this stony rubbish? <span class="highlight">Son of man,</span></div>
+                                    Out of this stony rubbish? Son of man,</div>
                                 <div class="line">
                                     You cannot say, or guess, for you know only</div>
                                 <div class="line">
-                                    A <span class="highlight">heap of broken images,</span> where the sun beats,</div>
+                                    A heap of broken images, where the sun beats,</div>
                                 <div class="line" id="line-23">
                                     And the dead tree gives no shelter, the cricket no relief,</div>
                                 <div class="line">
@@ -191,7 +174,7 @@
                                 <div class="line">
                                     Or your shadow at evening rising to meet you;</div>
                                 <div class="line">
-                                    <span class="highlight">I will show you fear in a handful of dust.</span>
+                                    I will show you fear in a handful of dust.
                                 </div>
                                 <div data-bs-toggle="tooltip"
                                     title="Fresh blows the wind to the homeland. My Irish child, where are you dwelling?">
@@ -1202,84 +1185,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="collapse" id="commentary">
-                        <div class="row row-cols-auto g-4">
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Stanza I</h5>
-                                        <p class="card-text">
-                                            We open on April, usually tied to Easter and rebirth (see Chaucer's <a
-                                                href="https://www.poetryfoundation.org/poems/43926/the-canterbury-tales-general-prologue"
-                                                target="_blank">prologue</a> to the <i>The Canterbury Tales</i>), but
-                                            here a time of burial, something Frazer discusses in <i>The Golden Bough</i>
-                                            in connection with human sacrifices intended to revive dying gods as part of
-                                            fertility rites.
-                                            We are introduced to the first voice, Marie, an acquaintance of Eliot.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Stanza II</h5>
-                                        <p class="card-text">
-                                            A vision of a dry desolation.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
     </main>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-        style="font-family: sans-serif;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Eliot's Notes</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Eliot added these notes to the New York edition published by Boni & Liveright in December 1922,
-                        apparently at the request of Liveright, who wanted to bulk out the volume.
-                    <blockquote class="blockquote">
-                        <p>The notes to The Waste Land! I had intended at first only to put down all the references for
-                            my earlier quotations, with a view to spiking the guns of critics of my earlier poems who
-                            had accused me of plagiarism. Then, when it came to print The Waste Land as a little book .
-                            . . it was discovered that the poem was inconveniently short, so I set to work to expand the
-                            notes, in order to provide a few more pages of printed matter, with the result that they
-                            became the remarkable exposition of bogus scholarship that is still on view today. I have
-                            sometimes thought of getting rid of these notes; but now they can never be unstuck. They
-                            have had almost greater popularity than the poem itself -- anyone who bought my book of
-                            poems, and found that the Notes to The Waste Land were not in it, would demand his money
-                            back . . . My notes stimulated the wrong kind of interest among the seekers of sources. It
-                            was just, no doubt, that I should have payed tribute to the work of Miss Jessie Weston; but
-                            I regret having sent so many enquirers off on a wild goose chase after Tarot cards and the
-                            Holy Grail.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                        <cite>“The Frontiers of Criticism” (1956), in T.S. Eliot, On Poetry and Poets (1957), pp.
-                            109-10.</cite>
-                    </figcaption>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
         id="offcanvasScrolling" aria-labelledby="notesLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                <!-- <a tabindex="0" role="button" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal" class="offcanvas-title title" id="notesLabel"> -->
+            <h5 class="offcanvas-title" id="notes-on-the-waste-land">
                 Notes on the Waste Land
-                <!-- </a> -->
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -1437,25 +1349,27 @@
                     Ferdinand Prince of Naples, so all the women are one woman, and the two sexes meet in Tiresias. What
                     Tiresias sees, in fact, is the substance of the poem. The whole passage from Ovid is of great
                     anthropological interest: <br>
-                    ‘&hellip;Cum Iunone iocos et maior vestra profecto est <br>
-                    Quam, quae contingit maribus,’ dixisse, ‘voluptas.’ <br>
-                    Illa negat; placuit quae sit sententia docti <br>
-                    Quaerere Tiresiae: venus huic erat ultraque nota.<br>
-                    Nam duo magnorum viridi coeuntia silva<br>
-                    Corpora serpentum baculi violaverat ictu<br>
-                    Deque viro factus, mirabile, femina septem<br>
-                    Egerat autumnos; octavo rursus eosdem<br>
-                    Vidit et ‘est vestrae si tanta potentia plagae,’<br>
-                    Dixit ‘ut auctoris sortem in contraria mutet,<br>
-                    Nunc quoque vos feriam!’ percussis anguibus isdem<br>
-                    Forma prior rediit genetivaque venit imago.<br>
-                    Arbiter hic igitur sumptus de lite iocosa<br>
-                    Dicta Iovis firmat; gravius Saturnia iusto<br>
-                    Nec pro materia fertur doluisse suique<br>
-                    Iudicis aeterna damnavit lumina nocte,<br>
-                    At pater omnipotens (neque enim licet inrita cuiquam<br>
-                    Facta dei fecisse deo) pro lumine adempto<br>
-                    Scire futura dedit poenamque levavit honore.
+                    <span data-bs-toggle="tooltip"
+                        data-bs-title="(Jove) jokes with Juno: 'Women get far more pleasure out of sex than men do,' he said. She disagreed; they decided to seek the judgement of Tiresias: he knew both sides of love. For with a blow of his staff he profaned two huge serpents mating in a green forest, and wonderful to say, was made from man to woman, and in that form spent seven years; in the eighth, he saw the same serpents again and said, 'Since striking you has the effect of turning one into one's opposite, I'll strike you once again.' And having done so, became the image of his former self. The sage agreed to settle their dispute, a trifling one, or so he must have thought, when he agreed with Jove. But Saturn's daughter reacted badly when he gave his judgement, and many thought her anger was excessive, when, for an issue of no great importance, she damned Tiresias to eternal blindness. But one god can't undo another's doing, and so Jove gave Tiresias the gift of foresight to replace the vision lost.">‘&hellip;Cum
+                        Iunone iocos et maior vestra profecto est <br>
+                        Quam, quae contingit maribus,’ dixisse, ‘voluptas.’ <br>
+                        Illa negat; placuit quae sit sententia docti <br>
+                        Quaerere Tiresiae: venus huic erat ultraque nota.<br>
+                        Nam duo magnorum viridi coeuntia silva<br>
+                        Corpora serpentum baculi violaverat ictu<br>
+                        Deque viro factus, mirabile, femina septem<br>
+                        Egerat autumnos; octavo rursus eosdem<br>
+                        Vidit et ‘est vestrae si tanta potentia plagae,’<br>
+                        Dixit ‘ut auctoris sortem in contraria mutet,<br>
+                        Nunc quoque vos feriam!’ percussis anguibus isdem<br>
+                        Forma prior rediit genetivaque venit imago.<br>
+                        Arbiter hic igitur sumptus de lite iocosa<br>
+                        Dicta Iovis firmat; gravius Saturnia iusto<br>
+                        Nec pro materia fertur doluisse suique<br>
+                        Iudicis aeterna damnavit lumina nocte,<br>
+                        At pater omnipotens (neque enim licet inrita cuiquam<br>
+                        Facta dei fecisse deo) pro lumine adempto<br>
+                        Scire futura dedit poenamque levavit honore.</span>
                 </li>
                 <li>
                     <a href="#line-221">221.</a> This may not appear as exact as Sappho's lines, but I had in mind
@@ -1610,15 +1524,23 @@
 
         });
 
-        $('#footnotes').click(function () {
-            $('.highlight').toggleClass('mark');
+        $('#guided-tour').click(function () {
+            if (!tour.isActive()) {
+                tour.start();
+            }
         });
     </script>
     <script>
         const tour = new Shepherd.Tour({
             useModalOverlay: true,
+            confirmCancel: false,
+            defaultStepOptions: {
+                scrollTo: {
+                    behavior: 'smooth',
+                    block: 'center'
+                }
+            },
         });
-
         const standardButtons = [
             {
                 action() {
@@ -1635,80 +1557,170 @@
             }
         ];
 
-        tour.addSteps([{
-            title: "Title",
-            text: "Originally titled He Do the Police in Different Voices, an allusion to Charles Dickens' <i>Our Mutual Friend</i>.",
-            attachTo: {
-                element: ".title",
-                on: "left-start"
+        tour.addSteps([
+            {
+                title: "<i>The Waste Land</i>",
+                text: "Though much ink has been spilled on T.S. Eliot's deliberately difficult modernist masterpiece, the need for a digital edition that invites rather than distances new readers of this multilingual and allusively dense poem has never been greater. Click the <b>Next</b> button to start the guided reading.",
+                attachTo: {
+                    element: "body",
+                    on: "top-start"
+                },
+                buttons: standardButtons,
+                arrow: false,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
-        {
-            title: "Publication Year",
-            text: "Not long after World War I.",
-            attachTo: {
-                element: "#publication-year",
-                on: "left-end"
+            {
+                title: "Title",
+                text: "Note the title is three separate, capitalized words. Eliot's originally intended title was <i>He do the Police in Different Voices</i>, an allusion to Charles Dickens' <i>Our Mutual Friend</i>.",
+                attachTo: {
+                    element: ".title",
+                    on: "left-start"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
-        {
-            title: "Epigraph",
-            text: "One of the tall tales of Trimalchio in the Satyricon of Petronius Arbiter, a first-century novel of which only fragments survive. The Sibyl was granted immortality but not youth. This epigraph replaced one from Conrad's Heart of Darkness, which Eliot dropped on Pound's advice.",
-            attachTo: {
-                element: "#epigraph",
-                on: "left-end"
+            {
+                title: "Publication Year",
+                text: "The poem was published not long after the end of World War I.",
+                attachTo: {
+                    element: "#publication-year",
+                    on: "left-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
-        {
-            title: "Dedication",
-            text: "From Purgatorio 26, Dante's tribute to Arnaut Daniel.",
-            attachTo: {
-                element: ".lead",
-                on: "left-end"
+            {
+                title: "Epigraph",
+                text: "The epigraph comes from the <i>Satyricon</i>, a first-century Roman satirical novel of which only fragments survive. The quote comes from the garish and decadent dinner host Trimlachio, who relates the story of the Sibyl. The Sibyl was a prophetess who was gifted immortality, but aged horribly because she had not also asked for everlasting youth. This epigraph replaced one from Conrad's Heart of Darkness, which Eliot dropped on Pound's advice.",
+                attachTo: {
+                    element: "#epigraph",
+                    on: "left-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
-        {
-            title: "The Order for the Burial of the Dead",
-            text: "From the Book of Common Prayer, the burial rites of the Church of England.",
-            attachTo: {
-                element: "#burial-of-the-dead",
-                on: "left-end"
+            {
+                title: "Dedication",
+                text: "Ezra Pound edited <i>The Waste Land</i>.",
+                attachTo: {
+                    element: ".lead",
+                    on: "left-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
-        {
-            title: "Opening",
-            text: "Cf. Chaucer's Canterbury Tales.",
-            attachTo: {
-                element: "#line-1",
-                on: "left-end"
+            {
+                title: "Dedication",
+                text: "From Purgatorio 26, Dante's tribute to Arnaut Daniel.",
+                attachTo: {
+                    element: "#fabbro",
+                    on: "left-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
-        {
-            text: "Countess Marie Larisch",
-            attachTo: {
-                element: "#line-15",
-                on: "left-end"
+            {
+                title: "",
+                text: "Already we have encountered death and fragmentation and in four languages: English, Latin, Greek, and Italian.",
+                attachTo: {
+                    element: ".text-center",
+                    on: "left-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
-        {
-            text: "Aldous Huxley",
-            attachTo: {
-                element: "#line-43",
-                on: "left-end"
+            {
+                title: "Sidebar",
+                text: "There are 5 parts to this poem. You can click a button to scroll to the appropriate part. I recommend enabling line numbers as well.",
+                attachTo: {
+                    element: "#table-of-contents",
+                    on: "left-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
             },
-            buttons: standardButtons
-        },
+            {
+                title: "Part I",
+                text: "The Order for the Burial of the Dead comes from the Book of Common Prayer of the Church of England.",
+                attachTo: {
+                    element: "#burial-of-the-dead",
+                    on: "right-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
+            },
+            {
+                title: "Incipit",
+                text: `Compare these lines to the prologue to Geoffrey Chaucer's <i>Canterbury Tales</i> (modernized by Coghill for clarity): <br><br>
+                        <p>
+                        When in April the sweet showers fall <br>
+                        And pierce the drought of March to the root, and all <br>
+                        The veins are bathed in liquor of such power <br>
+                        As brings about the engendering of the flower
+                        </p>
+                        `,
+                attachTo: {
+                    element: "#april",
+                    on: "right-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
+            },
+            {
+                title: "Starnbergersee",
+                text: "A lake in Germany",
+                attachTo: {
+                    element: "#line-8",
+                    on: "right-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                },
+            },
+            {
+                text: "Countess Marie Larisch",
+                attachTo: {
+                    element: "#line-15",
+                    on: "right-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                },
+            },
+            {
+                text: "Aldous Huxley",
+                attachTo: {
+                    element: "#line-43",
+                    on: "right-end"
+                },
+                buttons: standardButtons,
+                cancelIcon: {
+                    enabled: true
+                }
+            },
         ]);
-
-
-        tour.start();
     </script>
 </body>
 
